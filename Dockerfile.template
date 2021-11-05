@@ -2,14 +2,14 @@
 # see more about dockerfile templates here: https://www.balena.io/docs/learn/develop/dockerfile/
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 
-WORKDIR /usr/src/app
-
-RUN cd ./sonos
-COPY requirements.txt requirements.txt
+WORKDIR /usr/src/app/sonos
+COPY ./sonos/requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-COPY . ./
+COPY ./sonos ./
+
+WORKDIR /usr/src/app
 
 ENV UDEV=1
 
