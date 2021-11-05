@@ -7,8 +7,8 @@ pythonApi() {
 }
 
 nodeFe() {
-  cd fe
-  yarn dev
+#  cd fe
+#  yarn dev
 }
 
 (trap 'kill 0' SIGINT; pythonApi & nodeFe)
