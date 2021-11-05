@@ -6,6 +6,11 @@ pythonApi() {
   uvicorn index:app --reload
 }
 
+buttonApi() {
+  cd sonos
+  python index.py
+}
+
 nodeFe() {
 #  cd fe
 #  yarn dev
