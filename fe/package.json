@@ -1,0 +1,45 @@
+{
+    "name": "sonos-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "theoatkitt",
+    "license": "MIT",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "test": "next lint"
+    },
+    "devDependencies": {
+        "@kitt-technology/eslint-config": "^0.26.0",
+        "@kitt-technology/tailwind": "^0.27.0",
+        "@types/node": "^16.11.1",
+        "@types/react": "^17.0.30",
+        "@types/react-dom": "^17.0.9",
+        "eslint": "^7.32.0",
+        "eslint-config-next": "11.1.2",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jest": "^25.2.2",
+        "eslint-plugin-tailwindcss": "^1.17.0",
+        "prettier": "^2.4.1",
+        "typescript": "^4.4.4"
+    },
+    "dependencies": {
+        "@kitt-technology/go-gql-typedefs": "^1.1022.0",
+        "@kitt-technology/tw-theme-colors": "^0.17.0",
+        "@kitt-technology/ui-core": "^0.18.0",
+        "@typescript-eslint/eslint-plugin": "^5.2.0",
+        "autoprefixer": "^10.3.7",
+        "clsx": "^1.1.1",
+        "graphql": "^15.6.1",
+        "graphql-request": "^3.6.1",
+        "next": "^11.1.2",
+        "next-transpile-modules": "^8.0.0",
+        "postcss": "^8.3.9",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-hot-toast": "^2.1.1",
+        "tailwindcss": "^2.2.17"
+    }
+}

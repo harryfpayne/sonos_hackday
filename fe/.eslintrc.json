@@ -1,0 +1,3 @@
+{
+  "extends": ["@kitt-technology/eslint-config/next"]
+}
