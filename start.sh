@@ -16,4 +16,4 @@ nodeFe() {
 #  yarn dev
 }
 
-(trap 'kill 0' SIGINT; pythonApi & nodeFe)
+(trap 'kill 0' SIGINT; pythonApi & buttonApi)
