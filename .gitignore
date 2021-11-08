@@ -1,4 +1,5 @@
 .idea
 fe/node_modules
 fe/.next
+env/
 
