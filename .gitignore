@@ -2,4 +2,6 @@
 fe/node_modules
 fe/.next
 env/
+__pycache__
+sonos/__pycache__
 
