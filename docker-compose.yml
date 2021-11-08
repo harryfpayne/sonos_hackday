@@ -3,6 +3,7 @@ services:
   sonos:
     build: ./sonos
     restart: always
+    privileged: true
     expose:
       - "8000"
   fe:
