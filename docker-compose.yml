@@ -1,0 +1,12 @@
+version: '2'
+services:
+  sonos:
+    build: ./sonos
+    restart: always
+    expose:
+      - "8000"
+  fe:
+    build: ./fe
+    restart: always
+    expose:
+      - "3000"

@@ -26,9 +26,6 @@
         "typescript": "^4.4.4"
     },
     "dependencies": {
-        "@kitt-technology/go-gql-typedefs": "^1.1022.0",
-        "@kitt-technology/tw-theme-colors": "^0.17.0",
-        "@kitt-technology/ui-core": "^0.18.0",
         "@typescript-eslint/eslint-plugin": "^5.2.0",
         "autoprefixer": "^10.3.7",
         "clsx": "^1.1.1",

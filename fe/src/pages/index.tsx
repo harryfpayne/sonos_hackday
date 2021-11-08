@@ -1,5 +1,7 @@
 import React from "react";
-import {Button} from "@kitt-technology/ui-core"
+
+const Button = ({children, ...rest}) => <button>{children}</button>
+
 
 export default function Index() {
     return (
