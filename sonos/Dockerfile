@@ -9,7 +9,7 @@ FROM balenalib/raspberry-pi-python:3.9-stretch-run
 RUN install_packages gcc
 RUN pip install -U setuptools pip
 # sudo apt-get -y install python-rpi.gpio
-RUN install_packages python-rpi.gpio
+RUN install_packages python3-rpi.gpio
 
 # Set our working directory
 WORKDIR /usr/src/app
