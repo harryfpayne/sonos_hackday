@@ -4,10 +4,11 @@ services:
     build: ./sonos
     restart: always
     privileged: true
+    network_mode: "host"
     expose:
       - "8000"
-  fe:
-    build: ./fe
-    restart: always
-    expose:
-      - "80"
+#  fe:
+#    build: ./fe
+#    restart: always
+#    expose:
+#      - "80"
