@@ -7,7 +7,7 @@ from gpiozero import Button
 
 
 def button_callback():
-    Sonos.startParty(75)
+    Sonos.startParty(20)
 
 button = Button(2)
 button.when_pressed = button_callback
