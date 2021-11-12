@@ -32,13 +32,14 @@ class Sonos:
         self.speaker.volume = vol
 
     @staticmethod
-    def startParty(volume: Optional[int] = 50):
+    def startParty(volume: Optional[int] = None):
         sonos = Sonos()
         songs = Storage.getSongs()
         sonos.clearQueue()
         for song in songs:
             sonos.addSong(song)
-        sonos.set_volume(volume)
+        if volume is not None:
+            sonos.set_volume(volume)
         sonos.play()
 
     @staticmethod
