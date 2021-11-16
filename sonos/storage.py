@@ -2,6 +2,9 @@ from typing import List
 
 fileLocation: str = "./playlist.txt"
 
+def shareLinkToUri(link: str) -> str:
+    return "x-sonos-spotify:spotify:track:" + link.strip()[31:53] + "?sid=9&flags=8224&sn=2"
+
 class Storage:
     @staticmethod
     def clear():
@@ -15,4 +18,4 @@ class Storage:
     @staticmethod
     def getSongs() -> List[str]:
         with open(fileLocation) as file:
-            return [song.strip() for song in file.readlines()]
+            return [shareLinkToUri(song) for song in file.readlines()]
