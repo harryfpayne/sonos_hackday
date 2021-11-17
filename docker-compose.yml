@@ -7,9 +7,9 @@ services:
     network_mode: "host"
     expose:
       - "8000"
-#  fe:
-#    build: ./fe
-#    restart: always
-#    network_mode: "host"
-#    expose:
-#      - "3000"
+  fe:
+    build: ./fe2
+    restart: always
+    network_mode: "host"
+    expose:
+      - "5000"
