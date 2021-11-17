@@ -12,4 +12,4 @@ services:
     restart: always
     network_mode: "host"
     expose:
-      - "5000"
+      - "80"

@@ -1,10 +1,24 @@
-import SpotifyWebApi from "spotify-web-api-js";
+import SpotifyWebApi from "spotify-web-api-node";
+import SpotifyWebApiServer from 'spotify-web-api-node/src/server-methods';
 
-const access_token = "BQBf88zKgw2RCaCW0Km3zlJjZucSOXyaLazF3GGmwYewBHIx9xw60Gd4PZkMOO033lpygI8gCWUQo8Sr4UOZtq7CHcwGi_NXDxAFis58DjMtpTbBEaurU1UPB2FCZfvM4bYKrDj3B9quHlZOcOaRTILg&refresh_token=AQAaQZxJ7_gp46p0TBS0XDjTF8dbj17MG9oVHas09irT4ely7UyifzuAYQ2F4gcQ7sxByOnO3tx6CglD_EPas0dElUwFhVKi8qtyiJ5l3GAiGL6pfqChUgRH13dY3_IiN1M";
-var spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken(access_token);
+SpotifyWebApi._addMethods(SpotifyWebApiServer);
+
+const client_id = '342d8aa2c22c4847a7ed319ddb87e768';
+const client_secret = '8c0194c87f304a1fa8cabed834cf5f65';
+const spotifyApi = new SpotifyWebApi({
+  clientId: client_id,
+  clientSecret: client_secret
+});
 
 export async function getClient() {
+  await spotifyApi.clientCredentialsGrant().then(
+    function(data) {
+      spotifyApi.setAccessToken(data.body['access_token']);
+    },
+    function(err) {
+      console.log('Something went wrong when retrieving an access token', err);
+    }
+  );
   return spotifyApi;
 }
 
@@ -40,7 +54,7 @@ export async function queue(): Promise<Track[]> {
 export async function search(q: string): Promise<Track[]> {
   if (q === "") return [];
   const client = await getClient();
-  const {tracks: {items: tracks}} = await client.searchTracks(q);
+  const {body: {tracks: {items: tracks}}} = await client.searchTracks(q);
   return tracks.map(trackToTrack)
 }
 

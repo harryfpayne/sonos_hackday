@@ -26,8 +26,8 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "rollup-plugin-polyfill-node": "^0.7.0",
     "sirv-cli": "^1.0.0",
-    "spotify-api.js": "^9.0.1",
-    "spotify-web-api-js": "^1.5.2"
+    "spotify-web-api-node": "^4.0.0"
   }
 }
